@@ -1,0 +1,122 @@
+.container{
+    position:relative;
+    margin-top:150px;
+    margin-right:30%;
+    margin-left: 30%;
+    padding:20px;
+    background-color:rebeccapurple;
+    height:200px;
+    border-radius:40px;
+}
+.clock{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.hours,.minutes,.seconds{
+    background-color: indigo;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding:0 10px;
+    line-height: 150px;
+    position:relative;
+    border-radius:25px;
+}
+.numberminutes,.numberhours,.numbersecs,.colon{
+    font-size:60px;
+}
+.am_pm{
+    margin:10px;
+    line-height:50px;
+    padding:10px;
+    font-weight:bold;
+    font-size:30px;
+}
+.clock::before{
+    content:'';
+    width:123px;
+    height:123px;
+    background-color:darkslateblue;
+    border-radius:50%;
+    position:absolute;
+    left:-40px;
+    top:-40px;
+    box-shadow: 0 5px 15px rgba(15,15,15,0.8);
+}
+.container::before{
+    content:'';
+    width:120px;
+    height:120px;
+    background-color:darkslateblue;
+    border-radius:50%;
+    position:absolute;
+    left:-40px;
+    bottom:-40px;
+    box-shadow: 0 5px 15px rgba(15,15,15,0.8);
+}
+.date{
+    text-align:center;
+    padding:20px;
+    font-size:20px;
+    font-weight: 700;
+}
+body{
+    background-color:darkorchid;
+}
+h1{
+    text-align: center;
+    font-size:50px;
+}
+.numberhours:hover,
+.numberminutes:hover,
+.numbersecs:hover,
+.ampm:hover{
+    color:blueviolet;
+    text-shadow:0 0 15px;
+    transition: all 1s ease;
+}
+@media(max-width:600px){
+    .container{
+        margin:100px 5% 0;
+        height:200px;
+        padding:15px;
+    }
+    .hours,.minutes,.seconds{
+        padding:0 3px;
+        line-height: 150px;
+        margin:10px 0;
+    }
+    .clock::before{
+        width:100px;
+        height:100px;
+        top:-30px;
+        left:-30px;
+    }
+    .container::before{
+        width:100px;
+        height:100px;
+        bottom:-20px;
+        left:-20px;
+    }
+    .date{
+        padding:0 0;
+    }
+    .am_pm{
+       line-height:50px;
+       padding:0 0;
+       font-size:25px;
+    }
+    .numberminutes,.numberhours,.numbersecs,.colon{
+        font-size:40px;
+        line-height: 80px;
+    }
+    .text{
+        font-size:15px;
+    }
+    h1{
+        font-size:30px
+    }
+
+}
